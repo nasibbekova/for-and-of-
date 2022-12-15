@@ -238,17 +238,14 @@ let emails = {
 }
 let other = []
 
-// 2
-
-users.forEach (user=>{
-    let lasrWord = user.email.split('.').at(-1)
-
-    if (emails[lasrWord]){
-        emails[lasrWord].push(user.email)
-    } else {
-        other.push(user.email)
+// 1
+    users.forEach(user=> {
+    if(user.email.includes('org'))emails.org.push(user);
+        else if (user.email.includes('net))emails.net.push(user);
+            else if (user.email.includes('info'))emails.info.push(user);
+                else other.push(user)
     }
-})
+
 
 console.log(emails)
 
