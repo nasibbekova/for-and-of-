@@ -329,7 +329,8 @@ console.log(other)
         arr: []
     }
 
-    lists.forEach ((list)=> {
+    
+    for (let i of lists)
         if (list.completed === true) {
             a.count ++;
             a.arr.push(list.title)
@@ -337,7 +338,7 @@ console.log(other)
             b.count ++;
             b.arr.push(list.title)
         }
-    });
+    );
 
     console.log (
         a.count,
